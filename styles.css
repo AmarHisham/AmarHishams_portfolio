@@ -1,0 +1,268 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.about-image {
+    text-align: center; /* Center the image */
+}
+
+.about-image img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 50%; /* Make the image circular */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+    transition: transform 0.3s ease; /* Add transition for smooth zoom effect */
+}
+
+.about-image img:hover {
+    transform: scale(1.1); /* Zoom the image on hover */
+}
+
+
+header {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 50px;
+    font-weight: bold;
+    float: left;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Adjust the color of social media icons */
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    /* Set the icon color to white */
+    filter: brightness(0) invert(1);
+}
+
+
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-image img {
+    width: 600px; /* Ensures the width adjusts proportionally */
+    height: 600px; /* Set the desired height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+.about-text {
+    max-width: 30%;
+    text-align: c;
+}
+
+.about-text h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: "Arial Black", sans-serif; /* Change the font family */
+}
+
+.about-text p {
+    font-size: 20px;
+    line-height: 1.5;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #000000;
+    position: relative;
+    width: 300px;
+    height: 250px;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-details {
+    padding: 20px;
+}
+
+.project-details h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-details p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+}
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-heading h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-button button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+nav {
+    float: right;
+}
+
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a:hover:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+}
+
+.page {
+    padding-top: 80px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+
+.typing {
+    margin-top: 20px;
+}
+
+.button {
+    margin-top: 20px;
+}
+
+button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+.glow {
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+}
+
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .skill-card {
+        width: calc(50% - 30px); /* Adjust the width for responsiveness */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skill-card {
+        width: calc(100% - 20px); /* Adjust the width for responsiveness */
+    }
+}
+
